@@ -7,8 +7,6 @@
 // @match        http://localhost:8082/IMAGEnet/*
 // @match        http://192.168.50.212:8082/IMAGEnet/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=50.212
-// @updateURL    https://raw.githubusercontent.com/atrDaw/tampermono/main/octauto.user.js
-// @downloadURL  https://raw.githubusercontent.com/atrDaw/tampermono/main/octauto.user.js
 // @grant        none
 // ==/UserScript==
 
