@@ -6,8 +6,6 @@
 // @author       Tu Nombre
 // @match        https://rahhal.vlcia.com/mplus/app/dashboard
 // @match        https://mplus.rahhal.com/mplus/app/dashboard
-// @updateURL    https://raw.githubusercontent.com/atrDaw/tampermono/main/mono.user.js
-// @downloadURL  https://raw.githubusercontent.com/atrDaw/tampermono/main/mono.user.js
 // @grant        none
 // ==/UserScript==
 
