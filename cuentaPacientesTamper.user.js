@@ -32,7 +32,7 @@
     // CONFIGURACIÓN
     // ============================================
     const mostrarToast = true; // false para desactivar el toast
-    const TABLE_NAME = "pacientes_duplicate";
+    const TABLE_NAME = "pacientes";
   
     // ============================================
     // Credenciales (almacenadas en Tampermonkey)
