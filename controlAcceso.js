@@ -1,4 +1,4 @@
-const USUARIOS_PERMITIDOS = new Set([31]); // ids con acceso
+const USUARIOS_PERMITIDOS = new Set([31]); 
 
 function getUsuario() {
   const k = "!dyCqDqJvn-wK0#e";
