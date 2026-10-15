@@ -4,7 +4,7 @@
 // @version      1.0.0
 // @description  Al marcar "Marcar como Dilatando" se marca también TROPI.
 // @author       Tu Nombre
-// @match        https://mplus.rahhal.com/mplus/app/dashboard
+// @match        https://mplus.rahhal.com/mplus/app/*
 // @grant        none
 // @run-at       document-idle
 // ==/UserScript==
