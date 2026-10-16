@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Siguiente estado con espacio
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
+// @version      1.0.1
 // @description  Con la ventana "Modificar estado del paciente" abierta, el espacio marca el siguiente estado (Shift+Espacio, el anterior).
 // @author       rhhl
 // @match        https://mplus.rahhal.com/mplus/app/dashboard
@@ -11,16 +11,29 @@
 
 (function () {
   "use strict";
+
+  const IDS_PERMITIDOS = new Set([31, 26]);
+
   function getUsuario() {
-      const k = "!dyCqDqJvn-wK0#e";
-      const raw = localStorage.getItem("mplus-data");
-      if (!raw) return null;
-      const dec = String.fromCharCode(...raw.match(/.{1,2}/g).map((h,i)=>parseInt(h,16)^k.charCodeAt(i%k.length)%255));
+    const k = "!dyCqDqJvn-wK0#e";
+    const raw = localStorage.getItem("mplus-data");
+    if (!raw) return null;
+
+    try {
+      const dec = String.fromCharCode(
+        ...raw.match(/.{1,2}/g).map((h, i) =>
+          parseInt(h, 16) ^ (k.charCodeAt(i % k.length) % 255)
+        )
+      );
       return JSON.parse(dec).trader ?? null;
-    };
-    const usuario=getUsuario();
-    if (usuario.id!=31)return;
-    document.title+=' ✓';
+    } catch {
+      return null;
+    }
+  }
+
+  const usuario = getUsuario();
+  if (!usuario || !IDS_PERMITIDOS.has(Number(usuario.id))) return;
+  document.title += " ✓";
 
   const TECLA = " ";        // tecla para avanzar (" " = espacio)
   const CIRCULAR = true;    // true: del último pasa al primero
@@ -56,6 +69,6 @@
 
       inputs[siguiente].click();
     },
-    true // captura: se ejecuta antes que los listeners de la app
+    true
   );
 })();
