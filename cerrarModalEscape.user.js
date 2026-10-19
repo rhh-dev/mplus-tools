@@ -4,7 +4,7 @@
 // @version      1.2.0
 // @description  Al presionar Escape cierra la ventana/modal superior
 // @author       Tu Nombre
-// @match        https://mplus.rahhal.com/*
+// @match        https://mplus.rahhal.com/mplus/app/dashboard
 // @grant        none
 // @run-at       document-idle
 // ==/UserScript==
