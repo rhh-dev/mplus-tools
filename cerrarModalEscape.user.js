@@ -21,7 +21,7 @@
     };
     const usuario=getUsuario();
     if (usuario.id!=31)return;
-    document.title+=' ✓';
+    document.title+=' ·';
   
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape") return;
