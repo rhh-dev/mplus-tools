@@ -16,4 +16,5 @@ function getUsuario() {
 
 const usuario = getUsuario();
 if (!usuario || !USUARIOS_PERMITIDOS.has(Number(usuario.id))) return;
-document.title += " ✓";
+//document.title += " ✓";
+$('app-footer h5').first().append(' ✓');
