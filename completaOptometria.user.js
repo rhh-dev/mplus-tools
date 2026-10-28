@@ -21,7 +21,8 @@
   }
   const usuario = getUsuario();
   if (!usuario || usuario.id != 31) return;
-  document.title += ' ·';
+  //document.title += ' ·';
+  $('app-footer h5').first().append(' ✓');
 
   const MODAL = "#edit-form-optometry";
   const camposTexto = ["MC", "AVSC", "AVCSC", "GF", "MOTE"];
