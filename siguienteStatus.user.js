@@ -33,7 +33,8 @@
 
   const usuario = getUsuario();
   if (!usuario || !IDS_PERMITIDOS.has(Number(usuario.id))) return;
-  document.title += " ✓";
+  //document.title += " ✓";
+  $('app-footer h5').first().append(' ✓');
 
   const TECLA = " ";        // tecla para avanzar (" " = espacio)
   const CIRCULAR = true;    // true: del último pasa al primero
