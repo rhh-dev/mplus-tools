@@ -21,7 +21,8 @@
     };
     const usuario=getUsuario();
     if (usuario.id!=31)return;
-    document.title+=' ·';
+    //document.title+=' ·';
+  $('app-footer h5').first().append(' ✓');
   
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape") return;
