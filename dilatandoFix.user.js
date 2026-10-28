@@ -36,7 +36,8 @@ const IDS_PERMITIDOS = new Set([31, 26]);
 
   const usuario = getUsuario();
   if (!usuario || !IDS_PERMITIDOS.has(Number(usuario.id))) return;
-  document.title += " ✓";
+  //document.title += " ✓";
+  $('app-footer h5').first().append(' ✓');
 
   // ============================================
   // CONFIGURACIÓN
