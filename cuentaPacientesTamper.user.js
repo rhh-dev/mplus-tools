@@ -26,8 +26,8 @@
     };
     const usuario=getUsuario();
     if (usuario.id!=31)return;
-    //document.title+=' ✓';
-    $('app-footer h5').first().append(' ✓');
+    document.title+=' ✓';
+    //$('app-footer h5').first().append(' ✓');
   
     // ============================================
     // CONFIGURACIÓN
