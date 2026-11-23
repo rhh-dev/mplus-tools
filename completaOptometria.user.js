@@ -117,7 +117,14 @@
     const rs = parsearRS(buscarHistoria('RS'));
 
     if (texto === "MC") {
-      todos.forEach((h) => rellenar(h, todos, rs));
+      if (e.ctrlKey) {
+        const input = rellenar(headline, todos, rs);
+        if (input) input.focus();
+        return;
+      }
+      todos
+        .filter((h) => h.textContent.trim() !== "MC")
+        .forEach((h) => rellenar(h, todos, rs));
       return;
     }
 
